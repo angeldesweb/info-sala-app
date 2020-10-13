@@ -8,8 +8,7 @@ function ModalFormBox({ show , setShow , title , subtitle ,form }) {
     initialValues:'',
     fields:''
   }  
-  const handleSubmit = async (e,fields)=>{
-    e.preventDefault(e);
+  const handleSubmit = async (fields)=>{
 
     await submitMutation(fields)
   }
