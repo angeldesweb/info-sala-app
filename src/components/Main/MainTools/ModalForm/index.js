@@ -14,10 +14,12 @@ function ModalFormBox({ show , setShow , title , subtitle ,form }) {
     await submitMutation(fields)
   }
   const submitMutation = (fields)=>{
-    useMutation(CREATE_CLASIFICACION)
-  }
-  const handleSubmit = (e,fields)=>{
-    e.preventDefault(e);
+    const response = useMutation(CREATE_CLASIFICACION,{
+      variables:{
+        fields
+      } 
+    })
+    console.log(response)
   }
   return (
     <Modal
