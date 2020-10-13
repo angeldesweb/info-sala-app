@@ -16,6 +16,7 @@ const LoginFormBox =({history})=>{
         history.push('/')
     }
     const handleSubmit = async (args)=>{
+        console.log('ARGUMENTOS: 'args )
         await handleSign(args)
     }
     const handleSign = (args)=>{
