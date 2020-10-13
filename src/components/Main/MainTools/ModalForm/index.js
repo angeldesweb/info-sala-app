@@ -7,12 +7,14 @@ function ModalFormBox({ show , setShow , title , subtitle ,form }) {
   let ActiveForm = {
     initialValues:'',
     fields:''
+  }  
+  const handleSubmit = async (e,fields)=>{
+    e.preventDefault(e);
+
+    await submitMutation(fields)
   }
-  if(form === 'clasificacion'){
-    ActiveForm = {
-      initialValues:initialValuesClasif,
-      fields:fieldsClasif
-    }
+  const submitMutation = (fields)=>{
+    useMutation(CREATE_CLASIFICACION)
   }
   const handleSubmit = (e,fields)=>{
     e.preventDefault(e);
