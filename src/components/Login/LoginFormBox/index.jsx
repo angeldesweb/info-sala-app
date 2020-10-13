@@ -7,7 +7,6 @@ import DinamicForm from '../../Tools/Forms/DinamicForm';
 const LoginFormBox =({history})=>{
 
     const [signIn,{loading,data} ] = useMutation(SIGN_IN);
-    console.log(signIn)
     if(data){
         console.log(data)
         const {token,usuario} = data.signIn;
@@ -16,7 +15,7 @@ const LoginFormBox =({history})=>{
         history.push('/')
     }
     const handleSubmit = async (args)=>{
-        console.log('ARGUMENTOS: 'args )
+        console.log('ARGUMENTOS: ',args)
         await handleSign(args)
     }
     const handleSign = (args)=>{
