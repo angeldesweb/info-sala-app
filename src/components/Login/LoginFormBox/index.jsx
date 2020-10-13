@@ -7,7 +7,7 @@ import DinamicForm from '../../Tools/Forms/DinamicForm';
 const LoginFormBox =({history})=>{
 
     const [signIn,{loading,data} ] = useMutation(SIGN_IN);
-    console.log(SIGN_IN)
+    console.log(signIn)
     if(data){
         console.log(data)
         const {token,usuario} = data.signIn;
